@@ -2,18 +2,15 @@ package by.kapitonov.patterns.structural.proxy;
 
 public class ProxyProject implements Project {
 
-    private String url;
-    private RealProject project;
+    private Project project;
 
-    public ProxyProject(String url) {
-        this.url = url;
+    public ProxyProject(Project project) {
+        this.project = project;
     }
 
     @Override
     public void run() {
-        if (project == null) {
-            project = new RealProject(this.url);
-        }
         project.run();
+        System.out.println("qeqweqweq");
     }
 }

@@ -2,6 +2,6 @@ package by.kapitonov.patterns.creational.factory.abstruct;
 
 public interface AbstractFactory<T> {
 
-    T create(String animalType);
+    T create(String type);
 
 }
